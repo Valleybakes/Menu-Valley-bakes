@@ -1,6 +1,6 @@
-/* ==========================
+/* =======================================
    VALLEY BAKES
-========================== */
+======================================= */
 
 *{
 margin:0;
@@ -17,6 +17,7 @@ body{
 font-family:'Poppins',sans-serif;
 background:#fffaf8;
 color:#4b3f3f;
+overflow-x:hidden;
 
 }
 
@@ -28,11 +29,9 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-
-background:white;
-
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(15px);
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 z-index:999;
 
 }
@@ -40,13 +39,10 @@ z-index:999;
 .navbar{
 
 max-width:1200px;
-
 margin:auto;
 
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
 
 padding:18px 25px;
@@ -56,15 +52,20 @@ padding:18px 25px;
 .logo img{
 
 height:65px;
+transition:.3s;
+
+}
+
+.logo img:hover{
+
+transform:scale(1.05);
 
 }
 
 .navbar ul{
 
 display:flex;
-
 gap:35px;
-
 list-style:none;
 
 }
@@ -72,11 +73,8 @@ list-style:none;
 .navbar a{
 
 text-decoration:none;
-
 color:#7d5160;
-
 font-weight:600;
-
 transition:.3s;
 
 }
@@ -94,14 +92,12 @@ color:#e67ba6;
 min-height:100vh;
 
 display:flex;
-
 align-items:center;
-
 justify-content:center;
 
-gap:70px;
+gap:80px;
 
-padding:120px 10% 60px;
+padding:140px 8% 70px;
 
 flex-wrap:wrap;
 
@@ -111,11 +107,31 @@ flex-wrap:wrap;
 
 max-width:520px;
 
+animation:fadeUp 1s;
+
+}
+
+.badge{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:#ffe6ef;
+
+color:#d86d93;
+
+border-radius:30px;
+
+font-weight:600;
+
+margin-bottom:25px;
+
 }
 
 .hero h1{
 
-font-size:60px;
+font-size:62px;
 
 line-height:1.1;
 
@@ -131,9 +147,19 @@ font-size:20px;
 
 line-height:34px;
 
+color:#666;
+
 margin-bottom:35px;
 
-color:#666;
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
 
 }
 
@@ -141,21 +167,21 @@ color:#666;
 
 display:inline-block;
 
+padding:18px 34px;
+
+border-radius:40px;
+
 background:#e67ba6;
 
 color:white;
-
-padding:18px 35px;
-
-border-radius:50px;
 
 text-decoration:none;
 
 font-weight:600;
 
-transition:.3s;
+transition:.35s;
 
-box-shadow:0 12px 25px rgba(230,123,166,.35);
+box-shadow:0 15px 30px rgba(230,123,166,.35);
 
 }
 
@@ -167,23 +193,60 @@ background:#d85b8e;
 
 }
 
-/* ======== Carrusel ======== */
+.btn-outline{
+
+display:inline-block;
+
+padding:18px 34px;
+
+border-radius:40px;
+
+border:2px solid #e67ba6;
+
+color:#e67ba6;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.btn-outline:hover{
+
+background:#e67ba6;
+
+color:white;
+
+}
+
+/*========================*/
+/* CARRUSEL */
+/*========================*/
+
+.hero-image{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+}
 
 .slider{
 
 position:relative;
 
 width:430px;
+height:560px;
 
 max-width:90vw;
-
-height:540px;
 
 overflow:hidden;
 
 border-radius:30px;
 
-box-shadow:0 25px 45px rgba(0,0,0,.18);
+box-shadow:0 25px 45px rgba(0,0,0,.15);
 
 }
 
@@ -192,14 +255,13 @@ box-shadow:0 25px 45px rgba(0,0,0,.18);
 position:absolute;
 
 width:100%;
-
 height:100%;
 
 object-fit:cover;
 
 opacity:0;
 
-transition:opacity .8s ease;
+transition:opacity .9s ease;
 
 }
 
@@ -209,6 +271,10 @@ opacity:1;
 
 }
 
+/*========================*/
+/* PUNTOS DEL CARRUSEL */
+/*========================*/
+
 .dots{
 
 display:flex;
@@ -217,7 +283,7 @@ justify-content:center;
 
 gap:12px;
 
-margin-top:18px;
+margin-top:20px;
 
 }
 
@@ -229,7 +295,7 @@ height:12px;
 
 border-radius:50%;
 
-background:#d7d7d7;
+background:#d9d9d9;
 
 transition:.3s;
 
@@ -239,52 +305,17 @@ transition:.3s;
 
 background:#e67ba6;
 
-transform:scale(1.25);
-
-}
-width:420px;
-
-max-width:90vw;
-
-border-radius:28px;
-
-box-shadow:0 25px 45px rgba(0,0,0,.15);
+transform:scale(1.3);
 
 }
 
 /*========================*/
-
-.pedidos{
-
-padding:70px 20px;
-
-}
-
-.pedido-box{
-
-max-width:900px;
-
-margin:auto;
-
-background:#ffe9f2;
-
-padding:35px;
-
-border-radius:25px;
-
-text-align:center;
-
-font-size:20px;
-
-line-height:40px;
-
-}
-
+/* PRODUCTOS */
 /*========================*/
 
 #productos{
 
-padding:80px 10%;
+padding:90px 8%;
 
 }
 
@@ -292,11 +323,11 @@ padding:80px 10%;
 
 text-align:center;
 
-font-size:48px;
-
-margin-bottom:60px;
+font-size:50px;
 
 color:#d86d93;
+
+margin-bottom:60px;
 
 }
 
@@ -306,7 +337,7 @@ display:grid;
 
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
-gap:40px;
+gap:35px;
 
 }
 
@@ -318,7 +349,7 @@ border-radius:25px;
 
 overflow:hidden;
 
-box-shadow:0 15px 35px rgba(0,0,0,.08);
+box-shadow:0 18px 35px rgba(0,0,0,.08);
 
 transition:.35s;
 
@@ -326,7 +357,9 @@ transition:.35s;
 
 .producto:hover{
 
-transform:translateY(-10px);
+transform:translateY(-8px);
+
+box-shadow:0 25px 45px rgba(0,0,0,.15);
 
 }
 
@@ -338,129 +371,301 @@ height:320px;
 
 object-fit:cover;
 
+transition:.4s;
+
+}
+
+.producto:hover img{
+
+transform:scale(1.05);
+
+}
+
+.contenido{
+
+padding:25px;
+
+}
+
+.tag{
+
+display:inline-block;
+
+background:#ffe6ef;
+
+color:#d86d93;
+
+padding:8px 14px;
+
+border-radius:25px;
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:15px;
+
 }
 
 .producto h3{
 
-font-size:32px;
-
-padding:25px 25px 10px;
+font-size:30px;
 
 color:#d86d93;
+
+margin-bottom:15px;
 
 }
 
 .producto p{
 
-padding:0 25px;
-
 line-height:30px;
+
+color:#666;
 
 }
 
 .precios{
 
-padding:25px;
+margin-top:20px;
 
-font-size:19px;
+font-size:18px;
 
-line-height:38px;
+line-height:36px;
 
 font-weight:600;
 
 }
 
-.whatsapp{
+.btn-whatsapp{
 
 display:block;
 
-margin:25px;
+margin-top:25px;
 
-padding:18px;
+text-align:center;
 
 background:#25D366;
 
 color:white;
 
-text-align:center;
-
-text-decoration:none;
+padding:16px;
 
 border-radius:15px;
 
-font-weight:bold;
+text-decoration:none;
+
+font-weight:600;
 
 transition:.3s;
 
 }
 
-.whatsapp:hover{
+.btn-whatsapp:hover{
 
-background:#1aa952;
+background:#1cab55;
+
+transform:translateY(-3px);
 
 }
 
 /*========================*/
+/* BENEFICIOS */
+/*========================*/
 
-.contacto{
+.beneficios{
 
-padding:90px 20px;
+padding:80px 8%;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
 
 background:#fff2f7;
+
+}
+
+.beneficio{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.beneficio h3{
+
+color:#d86d93;
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+.beneficio p{
+
+line-height:28px;
+
+color:#666;
+
+}
+
+/*========================*/
+/* CONTACTO */
+/*========================*/
+
+#contacto{
+
+padding:90px 8%;
+
+background:#fffaf8;
+
+}
+
+.contacto-card{
+
+max-width:900px;
+
+margin:auto;
+
+background:white;
+
+padding:50px;
+
+border-radius:30px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.08);
 
 text-align:center;
 
 }
 
-.contacto h2{
+.contacto-card h2{
 
 font-size:42px;
 
 color:#d86d93;
 
-margin-bottom:25px;
+margin-bottom:20px;
 
 }
 
-.contacto p{
+.contacto-card p{
 
-font-size:20px;
+font-size:19px;
 
-line-height:40px;
+line-height:34px;
 
-}
+color:#666;
 
-.contacto a{
-
-color:#d86d93;
-
-text-decoration:none;
-
-font-weight:bold;
+margin-bottom:30px;
 
 }
 
+.botones{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+/*========================*/
+/* FOOTER */
 /*========================*/
 
 footer{
 
-padding:35px;
-
-text-align:center;
+margin-top:60px;
 
 background:white;
 
-color:#999;
+padding:45px 20px;
+
+text-align:center;
+
+border-top:1px solid #f1e5ea;
+
+}
+
+.footer-logo{
+
+width:90px;
+
+margin-bottom:15px;
+
+}
+
+.footer p{
+
+color:#888;
+
+line-height:30px;
 
 }
 
 /*========================*/
+/* ANIMACIONES */
+/*========================*/
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*========================*/
+/* RESPONSIVE */
+/*========================*/
 
 @media(max-width:900px){
 
+.navbar{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.navbar ul{
+
+gap:20px;
+
+}
+
 .hero{
 
-padding-top:140px;
+padding-top:150px;
+
+text-align:center;
 
 }
 
@@ -478,23 +683,68 @@ line-height:30px;
 
 }
 
-.navbar{
+.hero-buttons{
 
-flex-direction:column;
-
-gap:15px;
+justify-content:center;
 
 }
 
-.navbar ul{
-
-gap:20px;
-
-}
-
-.hero-image img{
+.slider{
 
 width:320px;
+
+height:420px;
+
+}
+
+#productos h2{
+
+font-size:38px;
+
+}
+
+.producto h3{
+
+font-size:26px;
+
+}
+
+.contacto-card{
+
+padding:35px 25px;
+
+}
+
+.contacto-card h2{
+
+font-size:34px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.slider{
+
+width:92vw;
+
+height:380px;
+
+}
+
+.btn,
+.btn-outline{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.botones{
+
+flex-direction:column;
 
 }
 
