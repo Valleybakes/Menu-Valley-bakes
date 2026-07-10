@@ -5,8 +5,8 @@ let actual = 0;
 
 function mostrarSlide(indice){
 
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active-dot"));
+    slides.forEach(slide=>slide.classList.remove("active"));
+    dots.forEach(dot=>dot.classList.remove("active-dot"));
 
     slides[indice].classList.add("active");
     dots[indice].classList.add("active-dot");
@@ -17,26 +17,52 @@ function siguienteSlide(){
 
     actual++;
 
-    if(actual >= slides.length){
-        actual = 0;
+    if(actual>=slides.length){
+        actual=0;
     }
 
     mostrarSlide(actual);
 
 }
 
-setInterval(siguienteSlide, 3500);
+setInterval(siguienteSlide,3500);
 
-// Permite cambiar tocando los puntitos
+dots.forEach((dot,index)=>{
 
-dots.forEach((dot, index)=>{
+    dot.addEventListener("click",()=>{
 
-    dot.addEventListener("click", ()=>{
-
-        actual = index;
+        actual=index;
 
         mostrarSlide(actual);
 
     });
 
 });
+
+/*========================*/
+/* Scroll Animation */
+/*========================*/
+
+const reveals=document.querySelectorAll(".reveal");
+
+function reveal(){
+
+    const windowHeight=window.innerHeight;
+
+    reveals.forEach(item=>{
+
+        const top=item.getBoundingClientRect().top;
+
+        if(top<windowHeight-120){
+
+            item.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll",reveal);
+
+reveal();
