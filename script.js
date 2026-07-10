@@ -3,14 +3,16 @@ const dots = document.querySelectorAll(".dot");
 
 let actual = 0;
 
-function cambiarSlide() {
+function cambiarSlide(){
+
+    console.log("Cambiando...");
 
     slides[actual].classList.remove("active");
     dots[actual].classList.remove("active-dot");
 
     actual++;
 
-    if (actual >= slides.length) {
+    if(actual >= slides.length){
         actual = 0;
     }
 
@@ -19,4 +21,4 @@ function cambiarSlide() {
 
 }
 
-setInterval(cambiarSlide, 3500);
+setInterval(cambiarSlide,3000);
