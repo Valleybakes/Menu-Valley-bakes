@@ -3,12 +3,17 @@ const dots = document.querySelectorAll(".dot");
 
 let actual = 0;
 
-function cambiarSlide(){
+function mostrarSlide(indice){
 
-    console.log("Cambiando...");
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active-dot"));
 
-    slides[actual].classList.remove("active");
-    dots[actual].classList.remove("active-dot");
+    slides[indice].classList.add("active");
+    dots[indice].classList.add("active-dot");
+
+}
+
+function siguienteSlide(){
 
     actual++;
 
@@ -16,9 +21,22 @@ function cambiarSlide(){
         actual = 0;
     }
 
-    slides[actual].classList.add("active");
-    dots[actual].classList.add("active-dot");
+    mostrarSlide(actual);
 
 }
 
-setInterval(cambiarSlide,3000);
+setInterval(siguienteSlide, 3500);
+
+// Permite cambiar tocando los puntitos
+
+dots.forEach((dot, index)=>{
+
+    dot.addEventListener("click", ()=>{
+
+        actual = index;
+
+        mostrarSlide(actual);
+
+    });
+
+});
