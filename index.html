@@ -1,119 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Valley Bakes</title>
+<title>Valley Bakes | El mejor amigo de tu café</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-body{
-background:#ffd9e8;
-color:#333;
-}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-header{
-background:white;
-padding:40px 20px;
-text-align:center;
-box-shadow:0 3px 10px rgba(0,0,0,.08);
-}
-
-header h1{
-font-size:45px;
-color:#d86d93;
-}
-
-header p{
-margin-top:10px;
-font-size:20px;
-color:#777;
-}
-
-.hero{
-padding:40px 20px;
-text-align:center;
-}
-
-.hero img{
-width:90%;
-max-width:420px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-section{
-padding:40px 20px;
-}
-
-h2{
-text-align:center;
-margin-bottom:20px;
-color:#d86d93;
-font-size:34px;
-}
-
-.menu{
-display:grid;
-gap:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-.card h3{
-font-size:28px;
-margin-bottom:15px;
-color:#d86d93;
-}
-
-.precio{
-font-size:18px;
-line-height:35px;
-}
-
-.info{
-background:white;
-padding:25px;
-border-radius:20px;
-line-height:35px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-.whatsapp{
-display:block;
-width:90%;
-max-width:350px;
-margin:40px auto;
-background:#25D366;
-color:white;
-padding:18px;
-text-align:center;
-text-decoration:none;
-font-size:22px;
-border-radius:15px;
-font-weight:bold;
-}
-
-footer{
-text-align:center;
-padding:35px;
-color:#777;
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -121,109 +22,369 @@ color:#777;
 
 <header>
 
-<h1>Valley Bakes</h1>
+<nav class="navbar">
 
-<p>El mejor amigo de tu café ☕🩷</p>
+<a class="logo" href="#inicio">
 
-</header>
-
-<section class="hero">
-
-<img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=900" alt="Panqué">
-
-</section>
-
-<section>
-
-<h2>Nuestro Menú</h2>
-
-<div class="menu">
-
-<div class="card">
-
-<h3>🍌 Panqué de Plátano</h3>
-
-<div class="precio">
-
-Grande — $120<br>
-
-Mediano — $75<br>
-
-Chico — $50
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>🍋 Panqué de Limón</h3>
-
-<div class="precio">
-
-Grande — $150<br>
-
-Mediano — $80<br>
-
-Chico — $55
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>🍊 Panqué de Naranja</h3>
-
-<div class="precio">
-
-Grande — $150<br>
-
-Mediano — $80<br>
-
-Chico — $55
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Pedidos</h2>
-
-<div class="info">
-
-📍 Entregas únicamente en Hermosillo, Sonora.<br><br>
-
-🩷 Pedidos disponibles miércoles y sábado.<br><br>
-
-🚗 Servicio a domicilio con costo extra.<br><br>
-
-📱 WhatsApp: 662 848 7229<br><br>
-
-Instagram: @Valleybakes.mx<br>
-
-TikTok: @Valleybakes.mx
-
-</div>
-
-</section>
-
-<a class="whatsapp" href="https://wa.me/526628487229">
-
-Hacer Pedido 💕
+<img src="images/logo.png" alt="Valley Bakes">
 
 </a>
 
+<ul>
+
+<li><a href="#inicio">Inicio</a></li>
+
+<li><a href="#productos">Panqués</a></li>
+
+<li><a href="#contacto">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section id="inicio" class="hero">
+
+<div class="hero-text">
+
+<span class="badge">
+
+✨ Horneado artesanal en Hermosillo
+
+</span>
+
+<h1>
+
+El mejor amigo de tu café ☕
+
+</h1>
+
+<p>
+
+Panqués elaborados con ingredientes de calidad,
+horneados especialmente para ti.
+
+Pedidos disponibles todos los miércoles y sábados.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#productos" class="btn">
+
+Ver colección
+
+</a>
+
+<a
+
+class="btn-outline"
+
+href="https://wa.me/526628487229?text=Hola%20😊%20me%20gustaría%20hacer%20un%20pedido.">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/portada.jpg" alt="Valley Bakes">
+
+</div>
+
+</section>
+
+<section class="pedidos">
+
+<div class="pedido-card">
+
+<h2 id="estadoPedidos">
+
+🟢 Pedidos abiertos
+
+</h2>
+
+<p>
+
+📅 Pedidos miércoles y sábado.
+
+</p>
+
+<p>
+
+🚗 Servicio a domicilio disponible con costo adicional.
+
+</p>
+
+<p>
+
+📍 Entregas únicamente en Hermosillo.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="productos">
+
+<h2>
+
+Nuestra colección
+
+</h2>
+
+<div class="productos">
+<div class="producto">
+
+<img src="images/platano-grande.jpg" alt="Panqué de Plátano">
+
+<div class="contenido">
+
+<span class="tag">⭐ Más vendido</span>
+
+<h3>🍌 Panqué de Plátano</h3>
+
+<p>
+
+Suave, húmedo y elaborado con plátanos maduros.
+Perfecto para acompañar tu café o regalar.
+
+</p>
+
+<div class="precios">
+
+<p><strong>Grande</strong> — $120</p>
+
+<p><strong>Mediano</strong> — $70</p>
+
+<p><strong>Chico</strong> — $50</p>
+
+</div>
+
+<a class="btn-whatsapp"
+
+href="https://wa.me/526628487229?text=Hola%20😊%20Quisiera%20pedir%20un%20Panqué%20de%20Plátano.">
+
+Pedir por WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="producto">
+
+<img src="images/limon-grande.jpg" alt="Panqué de Limón">
+
+<div class="contenido">
+
+<span class="tag">🍋 Glaseado artesanal</span>
+
+<h3>Panqué de Limón</h3>
+
+<p>
+
+Esponjoso, fresco y con un delicioso glaseado
+de limón natural.
+
+</p>
+
+<div class="precios">
+
+<p><strong>Grande</strong> — $150</p>
+
+<p><strong>Mediano</strong> — $80</p>
+
+<p><strong>Chico</strong> — $55</p>
+
+</div>
+
+<a class="btn-whatsapp"
+
+href="https://wa.me/526628487229?text=Hola%20😊%20Quisiera%20pedir%20un%20Panqué%20de%20Limón.">
+
+Pedir por WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="producto">
+
+<img src="images/naranja-grande.jpg" alt="Panqué de Naranja">
+
+<div class="contenido">
+
+<span class="tag">🍊 Cítrico favorito</span>
+
+<h3>Panqué de Naranja</h3>
+
+<p>
+
+Preparado con naranja natural para un sabor
+fresco y un aroma increíble.
+
+</p>
+
+<div class="precios">
+
+<p><strong>Grande</strong> — $150</p>
+
+<p><strong>Mediano</strong> — $80</p>
+
+<p><strong>Chico</strong> — $55</p>
+
+</div>
+
+<a class="btn-whatsapp"
+
+href="https://wa.me/526628487229?text=Hola%20😊%20Quisiera%20pedir%20un%20Panqué%20de%20Naranja.">
+
+Pedir por WhatsApp
+
+</a>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section class="beneficios">
+
+<div class="beneficio">
+
+<h3>🧁 Hecho artesanalmente</h3>
+
+<p>
+Cada panqué es preparado con ingredientes de calidad y horneado especialmente para ti.
+</p>
+
+</div>
+
+<div class="beneficio">
+
+<h3>📅 Pedidos</h3>
+
+<p>
+Recibimos pedidos todos los miércoles y sábados.
+</p>
+
+</div>
+
+<div class="beneficio">
+
+<h3>🚗 Entregas</h3>
+
+<p>
+Entregamos únicamente en Hermosillo.
+Servicio a domicilio con costo adicional.
+</p>
+
+</div>
+
+</section>
+
+<section id="contacto">
+
+<div class="contacto-card">
+
+<h2>
+
+¿Listo para pedir?
+
+</h2>
+
+<p>
+
+Haz tu pedido por WhatsApp o síguenos en nuestras redes sociales.
+
+</p>
+
+<div class="botones">
+
+<a
+
+class="btn"
+
+href="https://wa.me/526628487229?text=Hola%20😊%20Me%20gustaría%20hacer%20un%20pedido.">
+
+WhatsApp
+
+</a>
+
+<a
+
+class="btn-outline"
+
+href="https://instagram.com/valleybakes.mx"
+
+target="_blank">
+
+Instagram
+
+</a>
+
+<a
+
+class="btn-outline"
+
+href="https://tiktok.com/@valleybakes.mx"
+
+target="_blank">
+
+TikTok
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
 <footer>
 
-Hecho con mucho amor por Valley Bakes 🩷
+<div class="footer">
+
+<img
+
+src="images/logo.png"
+
+alt="Valley Bakes"
+
+class="footer-logo">
+
+<p>
+
+El mejor amigo de tu café ☕
+
+</p>
+
+<p>
+
+© 2026 Valley Bakes
+
+</p>
+
+</div>
 
 </footer>
+<script src="script.js"></script>
 
 </body>
 </html>
