@@ -903,3 +903,36 @@ background: white;
     background:#d05d87;
 
 }
+.saborSwiper{
+
+    width:100%;
+
+    max-width:380px;
+
+    margin:30px auto;
+
+}
+
+.saborSwiper img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+.swiper-pagination-bullet{
+
+    background:#d06a8b !important;
+
+}
+
+.swiper-pagination-bullet-active{
+
+    background:#b84d73 !important;
+
+}
