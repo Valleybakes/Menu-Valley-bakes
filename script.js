@@ -66,3 +66,45 @@ function reveal(){
 window.addEventListener("scroll",reveal);
 
 reveal();
+const slidesMes = document.querySelectorAll(".slide-mes");
+const dotsMes = document.querySelectorAll(".dot-mes");
+
+let currentMes = 0;
+
+function showSlideMes(index){
+
+    slidesMes.forEach(slide=>slide.classList.remove("active-mes"));
+
+    dotsMes.forEach(dot=>dot.classList.remove("active-dot-mes"));
+
+    slidesMes[index].classList.add("active-mes");
+
+    dotsMes[index].classList.add("active-dot-mes");
+
+}
+
+dotsMes.forEach((dot,index)=>{
+
+    dot.addEventListener("click",()=>{
+
+        currentMes=index;
+
+        showSlideMes(currentMes);
+
+    });
+
+});
+
+setInterval(()=>{
+
+    currentMes++;
+
+    if(currentMes>=slidesMes.length){
+
+        currentMes=0;
+
+    }
+
+    showSlideMes(currentMes);
+
+},3500);
