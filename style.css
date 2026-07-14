@@ -849,7 +849,6 @@ transform:translateY(0);
     box-shadow:0 15px 30px rgba(0,0,0,.12);
 
 }
-
 .slide-mes{
 
     position:absolute;
@@ -859,12 +858,13 @@ transform:translateY(0);
 
     object-fit:cover;
 
+    object-position:center;
+
     opacity:0;
 
-    transition:opacity .7s ease;
+    transition:opacity .6s ease;
 
 }
-
 .active-mes{
 
     opacity:1;
