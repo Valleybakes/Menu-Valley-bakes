@@ -774,3 +774,60 @@ opacity:1;
 transform:translateY(0);
 
 }
+
+.sabor-mes{
+    max-width:900px;
+    margin:80px auto;
+    padding:55px 35px;
+    text-align:center;
+    background:#fff6fa;
+    border-radius:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.badge-mes{
+    display:inline-block;
+    background:#ffe5ef;
+    color:#d05d87;
+    padding:8px 18px;
+    border-radius:50px;
+    font-size:.9rem;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.sabor-mes h2{
+    font-size:2.2rem;
+    color:#3b2d2d;
+    margin-bottom:10px;
+}
+
+.sabor-mes h3{
+    color:#d05d87;
+    font-size:1.7rem;
+    margin-bottom:20px;
+}
+
+.sabor-mes p{
+    color:#666;
+    font-size:1.05rem;
+    line-height:1.8;
+    max-width:600px;
+    margin:auto;
+}
+
+.btn-mes{
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 32px;
+    background:#d05d87;
+    color:white;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-mes:hover{
+    background:#bc4c75;
+}
