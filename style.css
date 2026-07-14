@@ -919,7 +919,8 @@ background: white;
 
     height:420px;
 
-    object-fit:cover;
+    object-fit:contain;
+background:#fff6fa;
 
     border-radius:20px;
 
