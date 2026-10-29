@@ -967,3 +967,15 @@ background:#fff6fa;
 .swiper-pagination-bullet-active{
     background:#d26a96;
 }
+
+.imagen-sabor {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  margin: 25px auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
